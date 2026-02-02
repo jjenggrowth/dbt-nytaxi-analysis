@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw taxi trip data from NYC TLC
+    database: project-e8afd21b-3050-493e-a77
+    schema: dezc_dataset
+    tables:
+      - name: green_tripdata_partitioned_clustered
+        description: Raw green taxi trip records
+      - name: yellow_tripdata_partitioned_clustered
+        description: Raw green taxi trip records
