@@ -38,8 +38,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_nytaxi_analysis:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
-
     staging:
       +materialized: view
+
+    intermediate:
+      +materialized: table
