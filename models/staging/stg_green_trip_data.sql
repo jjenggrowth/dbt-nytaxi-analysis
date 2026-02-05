@@ -32,6 +32,4 @@ from {{ source('raw', 'green_tripdata_partitioned_clustered') }}
 where vendorid is not null
 
 -- Limit records for faster iteration and memory management
-{% if target.name == 'dev' %}
-limit {{ var('record_limit', 10000) }}
-{% endif %}
+{{ cond_limit_rows() }}
